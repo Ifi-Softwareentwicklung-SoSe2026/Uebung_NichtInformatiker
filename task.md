@@ -1,7 +1,7 @@
 # Aufgabe: Python-Grundlagen für Nicht-Informatiker
 
 ## Kontext
-Diese Übung soll in Struktur und Ablauf an `exercise_03` angelehnt sein, jedoch mit Fokus auf **Python** statt C#.
+Diese Übung soll in Struktur und Ablauf an `exercise_03` angelehnt sein (ähnlicher Aufbau mit Lernzielen, Git/GitHub-Teil, Aufgabenblöcken und Akzeptanzkriterien), jedoch mit Fokus auf **Python** statt C#.
 
 ## Ziel
 Erstelle ein kleines Python-Programm zur Auswertung von Missionsdaten und nutze dabei die in der Vorlesung behandelten Sprach- und Bibliothekskonzepte.
