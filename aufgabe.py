@@ -1,3 +1,18 @@
+import matplotlib
+matplotlib.use('Agg') 
+# matplotlib ist im nicht interactiven Modus, um Probleme mit der Anzeige zu vermeiden
+
+############################################
+# hier weitere imports:
+############################################
+
+
+############################################
+# hier könnten weitere Funktionen definiert werden, z.B. für die interaktive 
+# Abfrage der Dichte
+############################################
+
+
 def main():
     print("Willkommen zum Dichteanalyse-Programm!")
     # Schritt 1: Dateninitialisierung
