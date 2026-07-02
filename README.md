@@ -1,6 +1,6 @@
 <!--
 author:   Volker Göhler
-version:  0.1.0
+version:  0.1.1
 language: de
 narrator: Deutsch Female
 edit: true
@@ -70,6 +70,11 @@ Diese Variante nutzt **kein lokales Git**. Alles passiert direkt auf github.com.
 5. Erstelle über **Pull request** einen PR nach `main` (Button: Compare & pull request).
 6. Reagiere auf Review-Kommentare direkt im PR (Antworten + neue Web-Commits).
 7. Merge den PR nach Freigabe.
+
+## Agenten
+
+- Maria ist ein Senior Developer der euch Issues generiert hat, die ihr bearbeiten sollt. Text dazu ist der Vollständigkeit halber in diesem Dokument enthalten. Maria könnt ihr mit `/help` ansprechen, um weitere Informationen zu erhalten (im Kommentarfeld). Wenn ihr ein Issue bearbeitet hat wird gegebenfalls ein weiteres Issue von Maria erstellt, das auf eure Lösung aufbaut.
+- Lisa ist ein Tester der eure Lösung auf Korrektheit überprüft. Sie wird eure PRs testen und ggf. Review-Kommentare hinterlassen.
 
 ## Aufgabe: Sortieren von Bohrkernproben nach Dichte
 
