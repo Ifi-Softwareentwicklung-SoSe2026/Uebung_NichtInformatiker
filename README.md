@@ -9,7 +9,7 @@ comment:  Übung Python für Nicht-Informatiker
 
 [![LiaScript Course](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/Ifi-Softwareentwicklung-SoSe2026/Uebung_NichtInformatiker/refs/heads/main/README.md)
 
-> Hinweis: Der Badge-Link zeigt auf den Branch `main`. Für andere Branches einfach `refs/heads/main` in der URL durch `refs/heads/<branch-name>` ersetzen.
+> Hinweis: Der Badge-Link zeigt auf den Branch `main`. Für andere Branches einfach `refs/heads/main` in der URL durch `refs/heads/<branch-name>` ersetzen. Wird das Repository umbenannt oder verschoben, muss die URL im Badge entsprechend angepasst werden.
 
 # Aufgabe 03 – Python für Nicht-Informatiker
 
