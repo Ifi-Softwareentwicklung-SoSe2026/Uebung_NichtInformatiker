@@ -33,15 +33,18 @@ In dieser Übung bearbeitest du ein durchgehendes Python-Szenario zur Auswertung
 - NumPy: Arrays, `loadtxt`, `reshape`, `linspace`, `arange`
 - Matplotlib (`matplotlib.pyplot`) für einfache Plots
 
-## 📌 Vorbereitung
+## 📌 Allgemeine Vorgehensweise
 
-1. Arbeite in deinem GitHub-Classroom-Repository.
+1. Arbeite mit deinem GitHub-Classroom-Repository.
 2. Lege einen Branch `integration` an.
 3. Erstelle für jede Teilaufgabe kleine, nachvollziehbare Commits.
+4. Öffne einen Pull Request nach `main` und arbeite Review-Kommentare ein.
+5. Führe den PR nach Freigabe zusammen (`merge`).
 
 ## 🛠️ Aufgabe 0: Git und GitHub kennenlernen
 
-### Dimensionen
+Dimensionen
+==========
 
 | Dimension | Werkzeuge & Features |
 |-----------|----------------------|
@@ -50,12 +53,13 @@ In dieser Übung bearbeitest du ein durchgehendes Python-Szenario zur Auswertung
 
 ### 🔧 Lokale Git-Arbeit (kurz)
 
-1. Repository klonen
-2. Branch `integration` erstellen
-3. Änderungen committen (aussagekräftige Commit-Message)
-4. Branch pushen und Pull Request öffnen
+1. Repository klonen (kopiert den Remote-Stand auf den lokalen Rechner)
+2. Branch `integration` erstellen und wechseln (`git switch -c integration`)
+3. Änderungen committen (aussagekräftige Commit-Message) (`git add .` + `git commit -m "..."`)
+4. Branch pushen (`git push -u origin integration`)
+5. Pull Request auf GitHub erstellen
 
-### 🌐 Neue Sektion: **Nur GitHub im Webportal (Remote-only)**
+### 🌐 Direkt auf GitHub im Webportal (Remote-only)
 
 Diese Variante nutzt **kein lokales Git**. Alles passiert direkt auf github.com.
 
@@ -63,49 +67,116 @@ Diese Variante nutzt **kein lokales Git**. Alles passiert direkt auf github.com.
 2. Erstelle über die Branch-Auswahl einen neuen Branch (z. B. `webportal-edit`).
 3. Öffne eine Datei und nutze den Web-Editor (Stift-Symbol), um Änderungen vorzunehmen.
 4. Committe direkt im Browser auf deinen Branch.
-5. Erstelle über **Contribute → Open pull request** einen PR nach `main`.
+5. Erstelle über **Pull request** einen PR nach `main` (Button: Compare & pull request).
 6. Reagiere auf Review-Kommentare direkt im PR (Antworten + neue Web-Commits).
 7. Merge den PR nach Freigabe.
 
-## 🚀 Aufgabe 1: Missionsdaten interaktiv auswerten
+## Aufgabe: Sortieren von Bohrkernproben nach Dichte
 
-### Teil A – Grundlagen
+In einem Bergbaubetrieb wurden mehrere Bohrkernproben entnommen. Jede Probe hat eine ID, einen Namen (z. B. "Granit_A1"), eine Dichte (in g/cm³) und eine Tiefe (in Metern). Die Proben sollen nach ihrer Dichte sortiert werden, um sie in einem Lager optimal anzuordnen. Nutze Bubble Sort, um die Proben in aufsteigender Reihenfolge zu sortieren.
 
-- Lies über `input()` Name und Anzahl von Messwerten ein.
-- Prüfe Datentypen mit `type()`.
-- Nutze Rechenoperatoren inkl. `%` und `**`.
-- Verwende `if/elif/else`, um Messwerte in Klassen einzuteilen.
+Schreibe das Program in Python in die Datei `aufgabe.py` und implementiere die folgenden Schritte in eigenen Funktionen. Die Funktionen sollen in der main Funktion aufgerufen werden. Das Program kann mit `python aufgabe.py` gestartet werden.
 
-### Teil B – Schleifen
+### Schritt 1: Dateninitialisierung
 
-- Erzeuge mit `for i in range(...)` Testdaten.
-- Nutze eine `while`-Schleife für Benutzereingaben bis zu einem Stop-Kriterium.
+Erstelle eine Liste von Tupeln, wobei jedes Tupel die Daten einer Bohrkernprobe enthält:
 
-### Teil C – Listen, Tupel, Dictionaries
+| ID | Name | Dichte (g/cm³) | Tiefe (m) |
+| --- | --- | --- | --- |
+| 101 | Granit_A1 | 2.7 | 150.5 |
+| 102 | Kalkstein_B2 | 2.4 | 80.2 |
+| 103 | Basalt_C3 | 3.0 | 200.0 |
+| 104 | Sandstein_D4 | 2.2 | 50.0 |
+| 105 | Schiefer_E5 | 2.8 | 120.3 |
+| 106 | Gneis_F6 | 2.9 | 180.7 |
+| 107 | Quarzit_G7 | 2.6 | 90.1 |
+| 108 | Tonstein_H8 | 2.1 | 40.5 |
+| 109 | Marmor_I9 | 2.5 | 110.0 |
+| 110 | Konglomerat_J10 | 2.3 | 70.2 |
 
-- Zerlege Datumseinträge wie `"2026-06-01"` mit `split("-")`.
-- Nutze `enumerate()` für indexierte Ausgaben.
-- Kombiniere zwei Listen mit `zip()`.
-- Finde Positionen mit `liste.index(element)`.
-- Speichere feste Messpunktkoordinaten als Tupel.
-- Nutze ein Dictionary für Sensorname → letzter Messwert und prüfe mit `in`, ob ein Sensor existiert.
+### Schritt 2: Berechnung der durchschnittlichen Dichte
 
-### Teil D – Funktionen und Libraries
+Nutze NumPy, um die Dichten in ein Array umzuwandeln und die durchschnittliche Dichte aller Proben zu berechnen.
+Hinweis: Nutze `np.mean()`.
 
-- Schreibe mindestens eine Funktion mit **zwei Rückgabewerten** (z. B. Mittelwert und Maximum).
-- Verwende mindestens eine Standardbibliothek (`math`, `random`, `statistics` o. ä.).
 
-### Teil E – NumPy & Matplotlib
+### Schritt 3: Implementierung von Bubble Sort
 
-- Erstelle NumPy-Arrays aus Messwerten.
-- Lade Daten aus Datei mit `np.loadtxt(...)`.
-- Forme Daten mit `reshape(...)` um.
-- Erzeuge Testachsen mit `np.linspace(...)` und `np.arange(...)`.
-- Visualisiere mindestens zwei Kurven mit `matplotlib.pyplot` (`plot`, `title`, `xlabel`, `ylabel`, `legend`).
+Schreibe eine Funktion `bubble_sort(proben)`, die die Liste der Bohrkernproben nach Dichte aufsteigend sortiert.
+
+Bubble Sort ist ein einfacher Sortieralgorithmus, der eine Liste schrittweise durchläuft und benachbarte Elemente vertauscht, wenn sie in der falschen Reihenfolge stehen. Der Name kommt daher, dass kleine Werte (wie Luftblasen im Wasser) nach oben "aufsteigen", während große Werte nach unten "absinken".
+
+
+Visualisierung des Algorithmus
+-------------------
+
+Stell dir vor, du hast eine Reihe von Bohrkernproben in einem Regal, die nach Dichte sortiert werden sollen:
+
+Erster Durchlauf:
+--------------
+
+Du beginnst bei der ersten Probe und vergleichst sie mit der zweiten.
+Falls die erste Probe eine höhere Dichte hat als die zweite, tauschst du sie.
+Das wiederholst du für alle benachbarten Proben bis zum Ende des Regals.
+Nach dem ersten Durchlauf ist die Probe mit der höchsten Dichte ganz rechts im Regal.
+
+
+Zweiter Durchlauf:
+----------------
+
+Jetzt ignorierst du die letzte Probe (sie ist bereits sortiert) und wiederholst den Vorgang.
+Nach diesem Durchlauf ist die zweithöchste Dichte an der vorletzten Position.
+
+
+Weiter so, bis keine Vertauschungen mehr nötig sind:
+--------------------------
+
+Irgendwann durchläuft der Algorithmus die Liste, ohne eine einzige Vertauschung durchzuführen.
+Dann ist das Regal vollständig sortiert.
+
+
+Zusammenfassung der Logik
+=========================
+
+- Laufe über die Liste der Proben.
+- Solange die Liste nicht sortiert ist:
+
+- Gehe durch die Liste
+- Vergleiche benachbarte Elemente
+- Tausche sie, falls nötig
+- Merke dir, ob ein Tausch stattgefunden hat
+
+- Falls kein Tausch stattfand: Beende die Schleife
+- Gib die sortierte Liste zurück
+
+
+**Bonus:** Erweitere die Funktion so, dass sie zwei Rückgabewerte liefert:
+
+- Die sortierte Liste.
+- Die Anzahl der durchgeführten Vertauschungen.
+
+
+### Schritt 4: Datenausgabe
+
+Gib die sortierten Proben in einem formatierten String aus. Nutze f-Strings und `enumerate()`, um die Position jeder Probe in der sortierten Liste anzuzeigen.
+
+### Schritt 5: Visualisierung der Dichteverteilung
+
+Nutze Matplotlib, um ein Balkendiagramm der Dichten zu erstellen:
+
+- X-Achse: Name der Probe.
+- Y-Achse: Dichte.
+- Titel: "Dichteverteilung der Bohrkernproben".
+- Nutze `plt.bar()` und `plt.xticks(rotation=45)`.
+
+### Schritt 6: Interaktive Abfrage der Dichte
+
+1. Erstelle ein Dictionary `dichte_zu_name`, das die Dichte als Schlüssel und eine Liste der Probennamen mit dieser Dichte als Wert enthält.
+2. Nutze `input()`, um den Benutzer nach einer Dichte zu fragen, und gib alle Proben mit dieser Dichte aus. Falls die Dichte nicht existiert, gib eine Fehlermeldung aus.
 
 ## ✅ Akzeptanzkriterien
 
-- Alle oben genannten Python-Inhalte sind im Code sichtbar verwendet.
 - Der Code läuft ohne Fehler.
+- Jede logische Unteraufgabe ist in einer eigenen Funktion implementiert.
 - Es gibt mindestens einen Plot mit beschrifteten Achsen.
 - Der Workflow mit Pull Request und Review ist dokumentiert bzw. durchgeführt.
