@@ -1,4 +1,4 @@
-# KI-Bewertung -- Aufgabe 03
+# Bohrkernproben mit Python analysieren
 
 <!-- agent-assignment-part:{"kind":"python","required_checks":["workflow:.github/workflows/python-run.yml"]} -->
 
