@@ -1,5 +1,7 @@
 # KI-Bewertung -- Aufgabe 03
 
+<!-- agent-assignment-part:{"kind":"python","required_checks":["workflow:.github/workflows/python-run.yml"]} -->
+
 ## Aufgabenbeschreibung
 
 Die Studierenden implementieren in `aufgabe.py` ein Python-Programm zur
